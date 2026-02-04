@@ -5,8 +5,6 @@ It provides basic image manipulation features such as resizing, JPEG quality adj
 
 The project is designed to be small, fast, and dependency-light, using the stb single-header libraries.
 
----
-
 ## Features
 
 - Resize images to arbitrary resolutions
@@ -18,8 +16,6 @@ The project is designed to be small, fast, and dependency-light, using the stb s
 - Simple command-line interface
 - Single-file C implementation
 - Minimal external dependencies
-
----
 
 ## Usage
 
@@ -47,8 +43,6 @@ The project is designed to be small, fast, and dependency-light, using the stb s
 ### Display image information
 ```ffjpeg image.jpg out.jpg --info```
 
----
-
 ## Building
 
 ### Windows (MinGW / GCC)
@@ -56,8 +50,6 @@ The project is designed to be small, fast, and dependency-light, using the stb s
 
 ### Linux
 ```gcc ffjpeg.c -O3 -lm -o ffjpeg```
-
----
 
 ## Dependencies
 
@@ -71,8 +63,6 @@ Both are public-domain single-header libraries by Sean Barrett.
 
 Place these headers in the same directory as main.c.
 
----
-
 ## Notes
 
 Very large resolutions (12K+) may require significant memory.
@@ -82,8 +72,6 @@ Color limiting is approximate.
 Supported input formats include JPG, PNG, BMP, and TGA.
 
 Output format is always JPG.
-
----
 
 ## Author
 
