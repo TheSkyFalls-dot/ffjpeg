@@ -24,7 +24,7 @@ The project is designed to be small, fast, and dependency-light, using the stb s
 ## Usage
 
 ### Command-Line Flags
-
+```
  --help              Show help message
  --info              Print image information
  --quality N         JPEG quality (1–100)
@@ -32,7 +32,7 @@ The project is designed to be small, fast, and dependency-light, using the stb s
  --flip-y            Flip image vertically
  --colors N          Limit total colors
  --resize WxH        Resize image (example: 1920x1080)
-
+```
 ## Examples
 
 ### Resize an image to 24K resolution with high quality
