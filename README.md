@@ -24,6 +24,7 @@ The project is designed to be small, fast, and dependency-light, using the stb s
 ## Usage
 
 ### Command-Line Flags
+
 --help              Show help message
 --info              Print image information
 --quality N         JPEG quality (1–100)
