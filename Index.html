@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ffjpeg</title>
+  <meta name="description" content="ffjpeg - a tiney jpeg CLI tool" />
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #121826;
+      --accent: #6cf2c2;
+      --accent2: #7aa2ff;
+      --text: #e7ecf3;
+      --muted: #9aa4b2;
+    }* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 10% -10%, #182034, transparent), var(--bg);
+  color: var(--text);
+}
+
+a { color: inherit; text-decoration: none; }
+
+header {
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+}
+
+.pill {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #000;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px 40px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+}
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  margin: 0 0 12px;
+}
+
+p.lead {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 520px;
+}
+
+.cta-row {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--card);
+  color: var(--text);
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #000;
+}
+
+.card {
+  background: linear-gradient(180deg, #141b2e, #0f1422);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+pre {
+  margin: 0;
+  padding: 16px;
+  background: #0b1020;
+  border-radius: 12px;
+  overflow-x: auto;
+  color: #c9d1ff;
+}
+
+.features {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.feature {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 40px 16px 60px;
+}
+
+.small { font-size: .85rem; color: var(--muted); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ffjpeg</div>
+    <a class="pill" href="https://github.com/" target="_blank">GitHub</a>
+  </header>  <section class="hero">
+    <div>
+      <h1>ffjpeg</h1>
+      <p class="lead">ffjpeg is a fast, minimal command‑line utility for compressing, resizing, and converting images. Built for developers who need precise control over image quality without heavyweight dependencies.</p><div class="cta-row">
+    <a class="btn primary" href="#" onclick="startDownload()">Download ffjpeg</a>
+    <a class="btn" href="#features">Features</a>
+  </div>
+</div>
+
+<div class="card">
+  <pre>$ ffjpeg input.jpg -q 5 -o cursed.png
+
+ultra low quality
+
+$ ffjpeg bliss.jpg --colors 256
+
+resize like a madman
+
+$ ffjpeg photo.png --resize 12000x8000 </pre> </div>
+
+  </section>  <section id="features" class="features">
+    <div class="feature">High-performance single-binary CLI</div>
+    <div class="feature">Supports JPEG, PNG, BMP, GIF, TGA, WebP, AVIF</div>
+    <div class="feature">Configurable compression and color depth</div>
+    <div class="feature">Flexible resizing up to ultra-high resolutions</div>
+    <div class="feature">No ImageMagick dependency</div>
+    <div class="feature">Designed for automation and pipelines</div>  </section>  <footer>
+    © 2026 ffjpeg. All rights reserved.<br/>
+    <span class="small">AVIF and WebP availability depends on build configuration.</span>
+  </footer><script>
+  // simple link verification (no checkboxes, no modals)
+  const verifyLink = 'https://amzn.to/4qA3Cbv'; // user must visit this first
+  const downloadUrl = 'https://github.com/TheSkyFalls-dot/ffjpeg/releases/latest'; // CHANGE THIS
+
+  function startDownload() {
+    const verified = localStorage.getItem('ffjpeg_verified');
+
+    if (!verified) {
+      localStorage.setItem('ffjpeg_verified', 'true');
+      window.open(verifyLink, '_blank');
+      alert('Please open the verification link, then return and click Download again.');
+      return;
+    }
+
+    window.location.href = downloadUrl;
+  }
+</script></body>
+</html>
